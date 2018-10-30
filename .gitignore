@@ -49,3 +49,5 @@ node_modules/
 
 # Ignore ChatApps
 public/uploads/*
+
+.idea/*
