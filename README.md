@@ -1,25 +1,59 @@
-# README
+## usersテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|index:true, null: false, unique: true|
+|name|integer|index:true, null: false|
+|email|integer|null: false, unique: true|
+|password|integer|null: false|
+|created_at|datetime|null: false|
+|updated_at|datetime|null: false|
 
-Things you may want to cover:
+### Association
+- has_many :members
+- has_many :groups, through: members
+- has_many :messages
 
-* Ruby version
+## groupsテーブル
 
-* System dependencies
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|index:true, null: false, unique: true|
+|name|integer|null: false|
+|created_at|datetime|null: false|
+|updated_at|datetime|null: false|
 
-* Configuration
+### Association
+- has_many :members
+- has_many :users, through: members
+- has_many :messages
 
-* Database creation
+## membersテーブル
 
-* Database initialization
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false, unique: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
+|created_at|datetime|null: false|
+|updated_at|datetime|null: false|
 
-* How to run the test suite
+### Association
+- belongs_to :group
+- belongs_to :user
 
-* Services (job queues, cache servers, search engines, etc.)
+## messagesテーブル
 
-* Deployment instructions
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false, unique: true|
+|body|text||
+|image|string||
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
+|created_at|datetime|null: false|
+|updated_at|datetime|null: false|
 
-* ...
-# ChatApps
+### Association
+- belongs_to :group
+- belongs_to :user
