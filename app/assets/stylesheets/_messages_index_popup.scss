@@ -1,0 +1,11 @@
+// Header Area
+
+.popup {
+  height: 30px;
+  background-color: #38aef0;
+  &__comment {
+    color: #ffffff;
+    text-align:center;
+    line-height: 30px;
+  }
+}
