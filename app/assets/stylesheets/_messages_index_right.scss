@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+@mixin right-sidepadding {
+  padding-left: 40px;
+  padding-right: 40px;  
+}
+
+// Right Contents Area
+.right-content {
+  position: relative;
+  background-color: $right_back_coler;
+  float: left;
+  width: calc( 100vw - 300px );
+  height: 100vh;
+}
+
+.group-space {
+  background-color: $right_back_coler;
+  border: #eeeeee;
+  border-bottom-style: solid;
+  @include right-sidepadding;
+  &__submit {
+    margin-top: 28px;
+    border-style: solid;
+    border-color: #38AEF0;
+    height: 40px;
+    padding: 0px 20px 0px;
+    background-color: $right_back_coler;
+    color: #38AEF0;
+    float: right;
+  }
+  &__name {
+    padding-top: 35px;
+    font-size: 20px;
+    color: #333333;
+  }
+  &__member {
+    padding-top: 15px;
+    font-size: 12px;
+    color: #999999;
+  }
+}
+
+.comment-item {
+  padding-top: 20px;
+  @include right-sidepadding;
+  padding-bottom: 20px;
+  &__name {
+    padding-right: 10px;
+    font-size: 16px;
+    color: #434A54;
+    float: left;
+  }
+  &__time {
+    font-size: 12px;
+    color: #999999;
+  }
+  &__comment {
+    padding-top: 10px;
+    font-size: 14px;
+    color: #434A54;
+  }
+}
+
+.post-space {
+  position: fixed;
+  bottom: 0px;
+  background-color: #AAAAAA;
+  width: calc(100vw - 300px);
+  &__form{
+    position: relative;
+  }
+  &__text{
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #434A54;
+    height: 50px;
+    // boder 3px * 2
+    width: calc( 90% - 121px );
+    boder: none;
+  }
+  .fa-picture-o{
+    position: absolute;
+    right: 20% ;
+    top: 50%;
+  }
+  &__submit{
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    background-color: #38AEF0;
+    border-width: 0;
+    height: 50px;
+    width: 10%;
+  }
+}
+
+#upload-icon{
+  display: none;
+}

@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+@mixin left-sidepadding {
+  padding-left: 20px;
+  padding-right: 20px;  
+}
+
+// Left Contents Area
+.left-content {
+  background-color: #2f3e51;
+  float: left;
+  width: 300px;
+  height: 100vh;
+}
+
+.user-space {
+  background-color: #253141;
+  height: 82px;
+  &__user-name {
+    padding-top: 35px;
+    @include left-sidepadding;
+    font-size: 16px;
+    color: $left_font_coler;
+    float: left;
+  }
+
+  .fa-pencil-square-o{
+    padding-top: 35px;
+    color: $left_font_coler;
+    float: right;
+  }
+  
+  .fa-cog{
+    padding-top: 35px;
+    color: $left_font_coler;
+    float: right;
+  }
+}
+
+.group-item {
+  background-color:#2f3e51;
+  padding-top: 20px;
+  @include left-sidepadding;
+  padding-bottom: 20px;
+  &__name {
+    font-size: 15px;
+    color: $left_font_coler;
+  }
+  &__comment {
+    padding-top: 5px;
+    font-size: 11px;
+    color: $left_font_coler;
+  }
+}

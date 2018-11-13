@@ -1,0 +1,50 @@
+-# heder area
+.popup
+  %p.popup__comment チャットグループが作成されました。
+
+-# left contents area
+.left-content
+  .user-space
+    %p.user-space__user-name 
+      %b ユーザー名
+    %i.fa.fa-cog
+    %i.fa.fa-pencil-square-o
+  .group-item
+    %p.group-item__name グループ名1
+    %p.group-item__comment コメント1
+  .group-item
+    %p.group-item__name グループ名2
+    %p.group-item__comment まだメッセージはありません。
+  .group-item
+    %p.group-item__name グループ名3
+    %p.group-item__comment まだメッセージはありません。
+
+-# right contents area
+.right-content
+  .group-space
+    %form{:action => "/", :method => "post"}
+      %input.group-space__submit{:type => "submit", :value => "edit"}
+    %p.group-space__name Sampleグループ
+    %p.group-space__member MEMBER: 太郎 次郎 三郎
+  .comment-item
+    %p.comment-item__name
+      %b 太郎
+    %p.comment-item__time 18/10/02 06:30:00
+    %p.comment-item__comment おはようございます。
+  .comment-item
+    %p.comment-item__name
+      %b 次郎
+    %p.comment-item__time 18/10/02 06:20:00
+    %p.comment-item__comment こんにちわ。
+  .comment-item
+    %p.comment-item__name
+      %b 三郎
+    %p.comment-item__time 18/10/02 06:10:00
+    %p.comment-item__comment こんばんわ。
+  .post-space
+    = form_tag do
+      %input.post-space__text{:name => "text", :size => "80", :type => "text", :placeholder => "type a message"}
+      %label.upload-label{for: "upload-icon"}
+        %i.fa.fa-picture-o
+        %input{:type => "file", :id => "upload-icon"}
+      %input.post-space__submit{:type => "submit", :value => "Send"}
