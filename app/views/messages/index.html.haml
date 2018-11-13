@@ -1,47 +1,47 @@
 -# heder area
-%div.popup
+%.popup
   %p.popup__comment チャットグループが作成されました。
 
 -# left contents area
-%div.left-content
-  %div.user-space
+%.left-content
+  %.user-space
     %p.user-space__user-name 
       %b ユーザー名
     %i.fa.fa-cog
     %i.fa.fa-pencil-square-o
-  %div.group-item
+  %.group-item
     %p.group-item__name グループ名1
     %p.group-item__comment コメント1
-  %div.group-item
+  %.group-item
     %p.group-item__name グループ名2
     %p.group-item__comment まだメッセージはありません。
-  %div.group-item
+  %.group-item
     %p.group-item__name グループ名3
     %p.group-item__comment まだメッセージはありません。
 
 -# right contents area
-%div.right-content
-  %div.group-space
+%.right-content
+  %.group-space
     %form{:action => "/", :method => "post"}
       %input.group-space__submit{:type => "submit", :value => "edit"}
     %p.group-space__name Sampleグループ
     %p.group-space__member MEMBER: 太郎 次郎 三郎
-  %div.comment-item
+  %.comment-item
     %p.comment-item__name
       %b 太郎
     %p.comment-item__time 18/10/02 06:30:00
     %p.comment-item__comment おはようございます。
-  %div.comment-item
+  %.comment-item
     %p.comment-item__name
       %b 次郎
     %p.comment-item__time 18/10/02 06:20:00
     %p.comment-item__comment こんにちわ。
-  %div.comment-item
+  %.comment-item
     %p.comment-item__name
       %b 三郎
     %p.comment-item__time 18/10/02 06:10:00
     %p.comment-item__comment こんばんわ。
-  %div.post-space
+  %.post-space
     = form_tag do
       %input.post-space__text{:name => "text", :size => "80", :type => "text", :placeholder => "type a message"}
       %label.upload-label{for: "upload-icon"}
