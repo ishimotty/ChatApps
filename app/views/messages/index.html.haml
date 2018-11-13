@@ -42,10 +42,9 @@
     %p.comment-item__time 18/10/02 06:10:00
     %p.comment-item__comment こんばんわ。
   %div.post-space
-    %form.post-space__form{:action => "/", :method => "post"}
+    = form_tag do
       %input.post-space__text{:name => "text", :size => "80", :type => "text", :placeholder => "type a message"}
       %label.upload-label{for: "upload-icon"}
         %i.fa.fa-picture-o
-        -# = f.file_field :image, id: "upload-icon"
+        %input{:type => "file", :id => "upload-icon"}
       %input.post-space__submit{:type => "submit", :value => "Send"}
-  
