@@ -1,13 +1,10 @@
--# heder area
-.popup
-  %p.popup__comment チャットグループが作成されました。
-
 -# left contents area
 .left-content
   .user-space
     %p.user-space__user-name 
-      %b ユーザー名
-    %i.fa.fa-cog
+      %b= current_user.name
+    = link_to edit_user_path(current_user) do
+      %i.fa.fa-cog
     %i.fa.fa-pencil-square-o
   .group-item
     %p.group-item__name グループ名1
